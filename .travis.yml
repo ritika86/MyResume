@@ -1,5 +1,33 @@
+dist: trusty
+
+sudo: required
+
+
+
 language: node_js
 
 node_js:
 
   - "stable"
+
+addons:
+
+  sonarcloud:
+
+    organization: "ritika86-github"
+
+    token:
+
+      secure: "f840c720848afc06843b0f114f2e91f58645dfc0"
+
+  sauce_connect:
+
+    username: "ritika86"
+
+    access_key: "b4f399a2-f172-405f-b658-d285dea56acc"
+
+    
+
+script:
+
+  - sonar-scanner
